@@ -1,0 +1,12 @@
+name: gdp_comparison
+title:
+username:
+account: johnkim
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 627575
+bundleId: 1798331
+url: https://johnkim.shinyapps.io/gdp_comparison/
+when: 1546728091.61742
+asMultiple: FALSE
+asStatic: FALSE
