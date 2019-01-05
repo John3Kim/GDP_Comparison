@@ -2,7 +2,7 @@ library(ggplot2)
 library(ggmap)
 library(maps)
 library(mapdata)
-source("GDP_Comparison/data/gdp_map_comparison.R")
+source("data/gdp_map_comparison.R")
 
 world <- map_data("world")
 
