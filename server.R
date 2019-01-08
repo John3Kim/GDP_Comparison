@@ -14,12 +14,12 @@ function(input, output) {
     # Use the functions from gdp_map_comparison.R
     year <- input$yearSelect
     country_to_select <- input$countrySelect
-    
-    country_select <- compareGDP(country=country_to_select,GDP_year=year,type="select") 
-    GDP_loweq <- compareGDP(country=country_to_select,GDP_year=year,type="lower-equal") 
-    GDP_higher <- compareGDP(country=country_to_select,GDP_year=year,type="greater") 
-    GDP_zero <- compareGDP(country=country_to_select,GDP_year=year,type="zero") 
-    
+
+    country_select <- compareGDP(country=country_to_select,GDP_year=year,type="select")
+    GDP_loweq <- compareGDP(country=country_to_select,GDP_year=year,type="lower-equal")
+    GDP_higher <- compareGDP(country=country_to_select,GDP_year=year,type="greater")
+    GDP_zero <- compareGDP(country=country_to_select,GDP_year=year,type="zero")
+
 
     ggplot() +
       # Lower or equal GDP
@@ -41,7 +41,7 @@ function(input, output) {
       xlab("Longitude") +
       ylab("Latitude") +
       coord_fixed(1.3)
-    
+
   }) 
   
   output$title <- renderText({paste("GDP Data Comparing",input$countrySelect,

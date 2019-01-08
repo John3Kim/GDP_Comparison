@@ -3,14 +3,12 @@
 # Description: This file is used to upload preprocess the 
 # GDP and the R maps data and call the functions in order to 
 # Use data from https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?end=2017&start=1960
-# TODO: Figure out why Antartica is counted as a country
 # Inspired by the reddit post found here: https://www.reddit.com/r/dataisbeautiful/comments/a7mpdh/south_koreas_gdp_per_capita_vs_the_rest_of_the/
 library(ggplot2)
 library(ggmap)
 library(maps)
 library(mapdata) 
 library(dplyr)
-#library(tidyr) 
 library(purrr)
 
 # Load data and preprocess first
@@ -20,14 +18,9 @@ world_data<- map_data("world")
 
 # Transform time series data into a single column representation
 GDP_data <- read.csv("data/GDP_data_preprocessed.csv")
-# GDP_data <- GDP_data %>% 
-#   gather(years, key = "year", value ="GDP")
-# write.csv(GDP_data,"data/GDP_data_preprocessed.csv")
 
 years <- c(1960:2017)
 years <- paste("X",years,sep="") 
-
-
 
 # Preprocess (cont'd): Resolve the cases below:
 # Antigua and Barbuda are separate in maps -> Antigua, Barbuda DONE

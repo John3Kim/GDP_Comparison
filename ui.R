@@ -1,5 +1,5 @@
 library(shiny)
-source("GDP_Comparison/data/gdp_map_comparison.R")
+source("data/gdp_map_comparison.R")
 
 fluidPage(
   
